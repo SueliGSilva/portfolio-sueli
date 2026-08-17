@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Portfólio profissional de Sueli Gonçalves Silva - Analista Financeiro">
+
+    <title>Sueli Gonçalves Silva | Analista Financeiro</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f9;
+            color: #1d2939;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* =========================
+           MENU
+        ========================= */
+
+        header {
+            background: linear-gradient(135deg, #0c2340, #164f7d);
+            color: white;
+        }
+
+        nav {
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f3c969;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 580px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            padding: 80px 0;
+        }
+
+        .tag {
+            display: inline-block;
+            color: #f3c969;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 75px);
+            line-height: 1.05;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            font-weight: normal;
+            color: #d9e8f5;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #e4edf5;
+            max-width: 780px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button-primary {
+            background: white;
+            color: #123d67;
+        }
+
+        .button-primary:hover {
+            transform: translateY(-3px);
+        }
+
+        .button-secondary {
+            border: 1px solid rgba(255,255,255,0.5);
+            color: white;
+        }
+
+        .button-secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* =========================
+           SEÇÕES
+        ========================= */
+
+        section {
+            padding: 75px 0;
+        }
+
+        .section-title {
+            color: #123d67;
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            color: #667085;
+            max-width: 850px;
+            margin-bottom: 35px;
+        }
+
+        /* =========================
+           SOBRE
+        ========================= */
+
+        .about-box {
+            background: white;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border: 1px solid #e5e7eb;
+        }
+
+        .about-box p {
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 13px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            color: #123d67;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #667085;
+        }
+
+        /* =========================
+           COMPETÊNCIAS
+        ========================= */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #e7f0f8;
+            color: #123d67;
+            padding: 9px 15px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           PROJETO
+        ========================= */
+
+        .project {
+            background: white;
+            padding: 38px;
+            border-radius: 14px;
+            border-left: 6px solid #d2a43a;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+        }
+
+        .project h3 {
+            color: #123d67;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .project p {
+            color: #4b5563;
+            margin-bottom: 18px;
+        }
+
+        .project ul {
+            margin-left: 22px;
+            color: #4b5563;
+        }
+
+        .project li {
+            margin-bottom: 8px;
+        }
+
+        .result {
+            background: #f4f7fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        .result strong {
+            color: #123d67;
+        }
+
+        /* =========================
+           INDICADORES
+        ========================= */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .stat {
+            background: white;
+            text-align: center;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .stat strong {
+            display: block;
+            color: #123d67;
+            font-size: 25px;
+        }
+
+        .stat span {
+            color: #667085;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CONTATO
+        ========================= */
+
+        .contact {
+            background: #123d67;
+            color: white;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact .section-subtitle {
+            color: #d9e8f5;
+        }
+
+        .contact-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .email-button {
+            background: white;
+            color: #123d67;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .email-button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        footer {
+            background: #0a223c;
+            color: #b8c6d5;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero {
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .hero h2 {
+                font-size: 23px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 55px 0;
+            }
+
+            .about-box,
+            .project {
+                padding: 25px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .button,
+            .email-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     CABEÇALHO
+========================= -->
+
+<header id="inicio">
+
+    <div class="container">
+
+        <nav>
+
+            <div class="logo">
+                SGS | PORTFÓLIO
+            </div>
+
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#competencias">Competências</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#projeto">Projeto SAP</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+        </nav>
+
+        <div class="hero">
+
+            <div class="hero-content">
+
+                <span class="tag">
+                    Portfólio Profissional
+                </span>
+
+                <h1>
+                    Sueli Gonçalves Silva
+                </h1>
+
+                <h2>
+                    Analista Financeiro
+                </h2>
+
+                <p>
+                    Profissional com experiência em rotinas financeiras e
+                    administrativas, planejamento financeiro, contas a pagar
+                    e receber, conciliações, tesouraria, fluxo de caixa,
+                    P&amp;L, EBITDA e melhoria de processos.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#contato"
+                       class="button button-primary">
+                        Entrar em contato
+                    </a>
+
+                    <a href="#projeto"
+                       class="button button-secondary">
+                        Ver projeto SAP B1
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- =========================
+     SOBRE
+========================= -->
+
+<section id="sobre">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Sobre mim
+        </h2>
+
+        <p class="section-subtitle">
+            Experiência em toda a rotina financeira e administrativa,
+            combinando conhecimento operacional, análise financeira,
+            controle de processos e utilização de sistemas ERP.
+        </p>
+
+        <div class="about-box">
+
+            <p>
+                Tenho experiência em <strong>contas a pagar, contas a receber,
+                tesouraria, conciliação bancária e contábil, fluxo de caixa
+                e planejamento financeiro</strong>.
+            </p>
+
+            <p>
+                Na área de planejamento, atuei com análise e preenchimento
+                de <strong>P&amp;L</strong>, lançamentos de contas contábeis,
+                centros de custo, natureza financeira, plano de contas,
+                sistemas de rateio e cálculo de <strong>EBITDA</strong>.
+            </p>
+
+            <p>
+                Também possuo experiência na elaboração e atualização de
+                relatórios em <strong>Excel Avançado</strong>, criação de
+                dashboards e acompanhamento de KPIs utilizando
+                <strong>Looker Studio</strong>.
+            </p>
+
+            <p>
+                Minha experiência inclui ainda a utilização de diferentes
+                sistemas ERP, processos bancários via CNAB, arquivos de
+                remessa e retorno, negociação com fornecedores, cobrança,
+                análise de inadimplência e tratamento de informações
+                financeiras.
+            </p>
+
+            <p>
+                Tenho conhecimento em <strong>matemática financeira,
+                calculadora HP 12C</strong> e conhecimentos na
+                <strong>língua espanhola</strong>.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COMPETÊNCIAS
+========================= -->
+
+<section id="competencias">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Competências profissionais
+        </h2>
+
+        <p class="section-subtitle">
+            Principais conhecimentos técnicos desenvolvidos ao longo da
+            minha experiência profissional.
+        </p>
+
+        <div class="skills">
+
+            <span class="skill">Contas a Pagar</span>
+            <span class="skill">Contas a Receber</span>
+            <span class="skill">Fluxo de Caixa</span>
+            <span class="skill">Planejamento Financeiro</span>
+            <span class="skill">P&amp;L</span>
+            <span class="skill">EBITDA</span>
+            <span class="skill">Conciliação Bancária</span>
+            <span class="skill">Conciliação Contábil</span>
+            <span class="skill">Tesouraria</span>
+            <span class="skill">Excel Avançado</span>
+            <span class="skill">Dashboards</span>
+            <span class="skill">KPIs</span>
+            <span class="skill">Looker Studio</span>
+            <span class="skill">SAP</span>
+            <span class="skill">SAP B1</span>
+            <span class="skill">SAP HANA</span>
+            <span class="skill">Oracle NetSuite</span>
+            <span class="skill">Totvs / Microsiga</span>
+            <span class="skill">Linx</span>
+            <span class="skill">Prosoft</span>
+            <span class="skill">Tesis</span>
+            <span class="skill">Guinzo</span>
+            <span class="skill">CNAB</span>
+            <span class="skill">Remessa e Retorno</span>
+            <span class="skill">Cobrança</span>
+            <span class="skill">Negociação</span>
+            <span class="skill">HP 12C</span>
+            <span class="skill">Matemática Financeira</span>
+            <span class="skill">Espanhol</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIÊNCIA
+========================= -->
+
+<section id="experiencia">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Experiência e atuação
+        </h2>
+
+        <p class="section-subtitle">
+            Atuação abrangente nas principais rotinas do departamento
+            financeiro.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>
+                    Contas a Pagar
+                </h3>
+
+                <p>
+                    Análise de documentos, boletos e invoices, lançamentos,
+                    baixas, arquivos bancários, CNAB, negociação com
+                    fornecedores e controle de pagamentos.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Contas a Receber
+                </h3>
+
+                <p>
+                    Provisão de recebimentos, baixas automáticas e manuais,
+                    arquivos de retorno, remessa bancária, cobrança de
+                    inadimplentes, boletos, borderôs e prorrogações.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Fluxo de Caixa
+                </h3>
+
+                <p>
+                    Controle e montagem de fluxo de caixa, análise de saldos
+                    bancários e avaliação da necessidade de aplicações ou
+                    resgates em CDB.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Planejamento
+                </h3>
+
+                <p>
+                    Análise e preenchimento de P&amp;L, centros de custo,
+                    natureza financeira, plano de contas, rateios e
+                    cálculo de EBITDA.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Conciliação
+                </h3>
+
+                <p>
+                    Conciliação bancária e contábil, compensações de contas
+                    razão de transição e análise das informações financeiras.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Relatórios e Dados
+                </h3>
+
+                <p>
+                    Elaboração e atualização de planilhas estratégicas,
+                    relatórios financeiros e dashboards com KPIs no
+                    Looker Studio.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SISTEMAS
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Sistemas e ferramentas
+        </h2>
+
+        <p class="section-subtitle">
+            Experiência com diferentes plataformas e sistemas utilizados
+            em operações financeiras.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>
+                    SAP
+                </h3>
+
+                <p>
+                    SAP, SAP B1 e SAP HANA, incluindo rotinas de lançamentos,
+                    conciliação e tratamento de informações financeiras.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Outros ERPs
+                </h3>
+
+                <p>
+                    Oracle NetSuite, Proteus (Totvs/Microsiga), Linx,
+                    Prosoft, Tesis e Guinzo.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Plataformas
+                </h3>
+
+                <p>
+                    Salesforce, ServiceNow e ferramentas bancárias para
+                    consulta, tratamento e validação de informações.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJETO SAP
+========================= -->
+
+<section id="projeto">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Projeto em destaque
+        </h2>
+
+        <p class="section-subtitle">
+            Participação na implantação e melhoria dos processos financeiros
+            utilizando SAP Business One.
+        </p>
+
+
+        <div class="project">
+
+            <h3>
+                🚀 Implantação e estabilização do SAP Business One
+            </h3>
+
+            <p>
+                Na antepenúltima empresa em que trabalhei, participei
+                da implantação do <strong>SAP Business One desde o início</strong>,
+                acompanhando o projeto durante aproximadamente um ano.
+            </p>
+
+            <p>
+                Durante a fase final de implantação e estabilização,
+                participei de uma análise detalhada das rotinas financeiras
+                pelas quais era responsável, identificando falhas,
+                inconsistências e oportunidades de melhoria.
+            </p>
+
+            <p>
+                Entre os processos analisados e testados estavam:
+            </p>
+
+            <ul>
+
+                <li>
+                    Configuração para importação de
+                    <strong>extratos bancários</strong>.
+                </li>
+
+                <li>
+                    Melhoria do processo de
+                    <strong>conciliação bancária</strong>.
+                </li>
+
+                <li>
+                    Configuração do <strong>addon bancário</strong>.
+                </li>
+
+                <li>
+                    Testes práticos de emissão de
+                    <strong>notas fiscais</strong>.
+                </li>
+
+                <li>
+                    Testes de importação de extratos bancários.
+                </li>
+
+                <li>
+                    Validação das <strong>baixas automatizadas</strong>
+                    de contas a pagar e receber.
+                </li>
+
+                <li>
+                    Alteração e melhoria de layouts de
+                    <strong>relatórios financeiros</strong>.
+                </li>
+
+                <li>
+                    Identificação de falhas no envio de notas fiscais.
+                </li>
+
+                <li>
+                    Análise das rotinas financeiras e identificação
+                    de erros de processo.
+                </li>
+
+                <li>
+                    Solicitação e acompanhamento das configurações
+                    necessárias junto à equipe responsável pelo sistema.
+                </li>
+
+            </ul>
+
+
+            <div class="result">
+
+                <p>
+                    <strong>Resultado do projeto:</strong>
+                </p>
+
+                <p>
+                    O trabalho contribuiu para transformar atividades que
+                    anteriormente eram realizadas manualmente em processos
+                    automatizados ou semiautomatizados.
+                </p>
+
+                <p>
+                    Com as melhorias, as informações financeiras passaram
+                    a ficar disponíveis de maneira mais rápida e completa
+                    dentro do SAP, facilitando a extração e elaboração de
+                    relatórios como <strong>Fluxo de Caixa, P&amp;L</strong>
+                    e demais análises financeiras.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat">
+                <strong>1 ano</strong>
+                <span>Participação no projeto</span>
+            </div>
+
+            <div class="stat">
+                <strong>SAP B1</strong>
+                <span>Implantação e estabilização</span>
+            </div>
+
+            <div class="stat">
+                <strong>Automação</strong>
+                <span>De processos financeiros</span>
+            </div>
+
+            <div class="stat">
+                <strong>KPIs</strong>
+                <span>Relatórios e indicadores</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONHECIMENTOS SAP
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Conhecimentos técnicos em SAP
+        </h2>
+
+        <p class="section-subtitle">
+            Experiência com operações utilizadas na rotina de conciliação,
+            lançamentos e tratamento contáb
